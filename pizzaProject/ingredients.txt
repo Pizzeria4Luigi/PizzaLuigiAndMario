@@ -1,0 +1,7 @@
+dough:50
+tomato sauce:50
+cheese:100
+pepperoni:40
+mushrooms:20
+ham:30
+sausage:35
