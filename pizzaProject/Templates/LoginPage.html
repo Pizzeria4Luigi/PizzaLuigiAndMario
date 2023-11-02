@@ -43,9 +43,10 @@
     <div class="square">
         <div class="container">
             <h2>Login</h2>
-            <form action = "login.php" method="POST">
-                <input type = "text" name = "username" placeholder = "Username" required>
-                <input type = "password" name = "password" placeholder = "Password" required>
+            <form action="/login" method="POST">
+                <input type = "text" name = "Username" placeholder = "Username" value="{{request.form.username}}">
+                <input type = "password" name = "Password" placeholder = "Password" value="{{request.form.password}}">
+                <input type="email" placeholder="Email" name="Email" value="{{request.form.email}}">
                 <input type = "submit" value = "Login">
             </form>
             <a href="" class="link">Forgot Password?</a>

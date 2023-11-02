@@ -63,7 +63,11 @@
 </head>
 <body>
     <header>
-        <h1>Our Restaurant Menu</h1>
+        {% if username %}
+            <h1> Hello, {{ username }}! This is our Menu </h1>
+        {% else %}
+            <h1> Hello user! This is our Menu </h1>
+        {% endif %}
     </header>
 
     <div class="menu-item">

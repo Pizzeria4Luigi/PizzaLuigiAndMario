@@ -1,0 +1,32 @@
+[
+    {
+        "email": "anuj@gmail.com",
+        "pass": "mansi",
+        "user": "anuj"
+    },
+    {
+        "email": "anuj@gmail.com",
+        "pass": "mansi",
+        "user": "mansi"
+    },
+    {
+        "email": "panchaldrashti7775@gmail.com",
+        "pass": "123",
+        "user": "drashti"
+    },
+    {
+        "email": "adriansdaleckis@gmail.com",
+        "pass": "qwerty",
+        "user": "Adrian_1"
+    },
+    {
+        "email": "dalv@mama.com",
+        "pass": "mama",
+        "user": "Dalv"
+    },
+    {
+        "email": "dalv@mama.com",
+        "pass": "mamam",
+        "user": "dalv"
+    }
+]
