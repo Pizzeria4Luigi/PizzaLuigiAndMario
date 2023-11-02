@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Menu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: slategray;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 12px 0;
+            position: fixed;
+            width: 100%;
+            text-align: center;
+            
+        }
+        h1 {
+            margin: 0;
+        }
+        .menu-item {
+            border: 1px solid #ccc;
+            margin: 20px;
+            padding: 10px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+            width: 250px;
+        }
+        .image {
+            height: 200px;
+            width: 200px;
+            border-radius: 10%;
+        }
+        @media (max-width: 768px) {
+        }
+        .buttonOrderNow {
+            height: 50px;
+            width: 200px;
+            background-color: red;
+            border-radius: 0%;
+            color: #fff;
+        }
+        .buttonUnavailable {
+            height: 50px;
+            width: 200px;
+            background-color: rgb(68, 68, 68);
+            border-radius: 0%;
+            color: #fff;
+        }
+        .buttonViewCart {
+            height: 50px;
+            background-color: #e0f748;
+            border-radius: 0%;
+            color: #fff;
+            width: 85%;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Our Restaurant Menu</h1>
+    </header>
+
+    <div class="menu-item">
+        <h2>Margherita</h2>
+        <img class="image" src = "PizzaMargherita.webp">
+        <button class="buttonOrderNow" onclick="Text">Add To Cart</button>
+    </div>
+
+    <div class="menu-item">
+        <h2>Pepperoni</h2>
+        <img class="image" src = "pepperoni-pizza.png">
+        <button class="buttonOrderNow">Add To Cart</button>
+    </div>
+
+    <div class="menu-item">
+        <h2>Quattro Formaggi</h2>
+        <img class="image" src = "Quattro-formaggi-pizza-square.jpg">
+        <button class="buttonOrderNow">Add To Cart</button>
+    </div>
+
+    <div class="menu-item">
+        <h2>Mario's Madness</h2>
+        <img class="image" src = "pizza-mushrooms-salami-pepperoni-ham.jpg">
+        <button class="buttonOrderNow">Add To Cart</button>
+    </div>
+
+    <div class="menu-item">
+        <h2>Luigi's Baloney</h2>
+        <img class="image" src = "Luigi's pizza.jpg">
+        <button class="buttonOrderNow">Add To Cart</button>
+    </div>
+
+    <div class="menu-item">
+        <h2>Bowser Buns</h2>
+        <img class="image" src = "garlic-bread-recipe-snippet.jpg">
+        <button class="buttonOrderNow">Add To Cart</button>
+    </div>
+    <button class="buttonViewCart">View Cart</button>
+
+</body>
+</html>
