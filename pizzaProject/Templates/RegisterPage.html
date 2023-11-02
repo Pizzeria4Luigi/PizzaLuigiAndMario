@@ -2,6 +2,18 @@
 <html>
 <head>
     <title>Registration</title>
+
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+        <ul class=flashes>
+        {% for message in messages %}
+        <li>{{ message }}</li>
+        {% endfor %}
+        </ul>
+    {% endif %}
+    {% endwith %}
+
+
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -40,10 +52,11 @@
     <div class="square">
         <div class="container">
             <h2>Register</h2>
-            <form action="login.php" method="POST">
-                <input type="text" name="username" placeholder="Username" required>
-                <input type="password" name="password" placeholder="Password" required>
-                <input type="password" name="password1" placeholder="Repeat Password" required>
+            <form action="/registration" method="POST">
+                <input type="text" name="Username" placeholder="Username" value="{{request.form.Username}}">
+                <input type="password" name="Password" placeholder="Password" value="{{request.form.Password}}">
+                <!-- <input type="password" name="Password1" placeholder="Repeat Password" required> -->
+                <input type="email" placeholder="Email" name="Email" value="{{request.form.Email}}">
                 <input type="submit" value="Register">
             </form>
             <a href="LoginPage.html">Already a member? Login</a>

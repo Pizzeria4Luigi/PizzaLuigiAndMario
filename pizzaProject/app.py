@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, url_for, json, session
+from flask import Flask, render_template, request, redirect, url_for, json, session, flash
 import os
 
 app = Flask(__name__)
@@ -54,18 +54,35 @@ def Register_page1():
             print(data)
                 # json.load(d, outfile)
             # d = {"email": "", "pass": "", "user": ""}
+            
+
+            for user in data:
+                print(user['email'])
+                print(attempted_email)
+                if user['email'] == attempted_email:
+                    flash(f'User with email {attempted_email} already exists.')
+                    return render_template('RegisterPage.html')
+
+            for user in data:
+                print(user['user'])
+                print(attempted_email)
+                if user['user'] == attempted_username:
+                    flash(f'User with username {attempted_username} already exists.')
+                    return render_template('RegisterPage.html')
+
             d['user']=attempted_username
             
             d['pass']=attempted_password
             
             d['email']=attempted_email
             data.append(d)
-            with open('data.json', 'w') as outfile:  
-                json.dump(data, outfile, indent=4)
+
 
             if request.form['Username'] == '' or request.form['Password'] == '' or request.form['Email'] == '':
                return 'Invalid Credentials. Please try again.' 
             else: 
+                with open('data.json', 'w') as outfile:  
+                    json.dump(data, outfile, indent=4)
                 return render_template('LoginPage.html')
         else:
             return render_template('RegisterPage.html')
