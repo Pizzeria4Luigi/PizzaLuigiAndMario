@@ -114,6 +114,14 @@ def login_page():
 
     return render_template('LoginPage.html')
 
+@app.route('/orders', methods=['GET', 'POST'])
+def orders():
+    return render_template('Orders.html')
+
+@app.route('/forgotten_password', methods=['GET', 'POST'])
+def forgotten_password():
+    return render_template('ForgottenPassword.html')
+
 @app.route('/new', methods=['GET', 'POST'])
 def new():
     return render_template('bcd.html')
