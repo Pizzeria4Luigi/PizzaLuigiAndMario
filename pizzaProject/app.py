@@ -162,9 +162,8 @@ def login_page():
        
         if session['email_confitmed'] == True:
             for user in data:
-                if request.form['Username'] == user['user'] and request.form['Password'] == user['pass'] and request.form['Email'] == user['email']:
-                    print(request.form['Username'])
-                    session['username'] = request.form['Username']
+                if request.form['Password'] == user['pass'] and request.form['Email'] == user['email']:
+                    session['username'] = user['user']
                     return redirect(url_for('Main'))
                     #return 'SUCCESSFULLY LOGGEDIN'
                     #error = 'Invalid Credentials. Please try again.'
@@ -188,6 +187,23 @@ def orders():
 
 @app.route('/forgotten_password', methods=['GET', 'POST'])
 def forgotten_password():
+    if request.method == "POST":
+        message = Message('Your password', sender='adriansdaleckis@gmail.com', recipients=['adriansdaleckis@gmail.com'])
+
+        with open('data.json', 'r') as outfile: 
+            data = json.load(outfile)
+        for user in data:
+            if request.form['Email'] == user['email']:
+                cur_password = user['pass']
+
+        if 'cur_password' in locals():
+            message.body = f'Your password is {cur_password}.'
+            mail.send(message)
+            flash('Email sent successfully!')
+            return render_template('LoginPage.html')
+        else:
+            flash('This email does not exist in our database')
+            return render_template('ForgottenPassword.html')
     return render_template('ForgottenPassword.html')
 
 @app.route('/new', methods=['GET', 'POST'])

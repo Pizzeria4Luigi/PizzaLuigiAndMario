@@ -56,9 +56,9 @@
         <div class="container">
             <h2>Login</h2>
             <form action="/login" method="POST">
-                <input type = "text" name = "Username" placeholder = "Username" value="{{request.form.username}}">
-                <input type = "password" name = "Password" placeholder = "Password" value="{{request.form.password}}">
+                <!-- <input type = "text" name = "Username" placeholder = "Username" value="{{request.form.username}}"> -->
                 <input type="email" placeholder="Email" name="Email" value="{{request.form.email}}">
+                <input type = "password" name = "Password" placeholder = "Password" value="{{request.form.password}}">
                 <input type = "submit" value = "Login">
             </form>
             <a href="/forgotten_password" class="link">Forgot Password?</a>
