@@ -1,8 +1,10 @@
-from flask import Flask, render_template, request, redirect, url_for, json, session, flash
+from flask import Flask, render_template, request, redirect, url_for, json, session, flash, jsonify
 import os
 from flask_mail import Mail, Message
 from itsdangerous import URLSafeTimedSerializer
 import time
+import json
+from flask import Flask, request, jsonify
 
 app = Flask(__name__)
 file_path = os.path.join(os.path.dirname(__file__), "currentOrder.txt")
@@ -59,32 +61,18 @@ def send_conf_mail():
 def order_pizza():
     # Get the pizza name from the POST request
     pizza_name = request.form.get('pizza_name')
+    with open(file_path, "r+") as file:
+        try:
+            orders = json.load(file)
+        except json.decoder.JSONDecodeError:
+            orders = {}
 
-    # Assuming that the pizza_name is an integer id like "1", "2", etc.
-    # If it's a string, you may need to map it to an integer ID
-
-    # Initialize an empty orders dictionary
-    orders = {}
-
-    # Check if currentOrder.txt exists and is not empty
-    if os.path.exists(file_path) and os.path.getsize(file_path) > 0:
-        # Load the current orders from the file
-        with open(file_path, "r") as file:
-            for line in file:
-                # Split each line by colon
-                parts = line.strip().split(":")
-                if len(parts) == 2:
-                    orders[parts[0]] = int(parts[1])
-
-    # Increment the count for the ordered pizza
-    orders[pizza_name] = orders.get(pizza_name, 0) + 1
+        orders[pizza_name] = orders.get(pizza_name, 0) + 1
+        file.seek(0)  # Move to the start of the file
+        json.dump(orders, file)
+        file.truncate()  # Remove any remaining contents from the old version
     
-    # Write the updated orders back to the file
-    with open(file_path, "w") as file:
-        for pizza_id, count in orders.items():
-            file.write(f"{pizza_id}:{count}\n")
-
-    return redirect(url_for('success'))
+    return jsonify(message=f"{pizza_name} ordered!", current_orders=orders)
 
 @app.route('/success')
 def success():

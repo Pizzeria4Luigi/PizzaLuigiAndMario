@@ -20,13 +20,6 @@
         h1 {
             margin: 0;
         }
-        .login-button {
-            border: 1px solid #ccc;
-            background-color: #ccc;
-            position: absolute;
-            top: 12px;
-            right: 12px;
-        }
         .menu-item {
             border: 1px solid #ccc;
             margin: 20px;
@@ -70,9 +63,6 @@
 </head>
 <body>
     <header>
-        <div class="login-button">
-            <button onclick="window.location.href='LoginPage.html'">Login</button>
-        </div>
         {% if username %}
             <h1> Welcome, {{ username }}! This is our Menu </h1>
         {% else %}
@@ -83,46 +73,130 @@
     <div class="menu-item">
         <h2>Margherita</h2>
         <img class="image" src="PizzaMargherita.webp">
-        <form action="/order" method="post">
-            <input type="hidden" name="pizza_name" value="Margherita">
-            <button type="submit">Order Now</button>
-        </form>
-    
+        <button onclick="orderPizza('Margherita')" class="buttonOrderNow">Order Now</button>
     </div>
+    <!-- Repeat for other pizzas -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+    function orderPizza(pizzaName) {
+        $.ajax({
+            type: "POST",
+            url: "/order",
+            data: {pizza_name: pizzaName},
+            success: function(response) {
+                // Handle the response here, maybe update the UI to show the added pizza
+                console.log(response);
+            }
+        });
+    }
+    </script>    
     
 
     <div class="menu-item">
         <h2>Pepperoni</h2>
-        <img class="image" src = "pepperoni-pizza.png">
-        <form action="/order" method="post">
-            <input type="hidden" name="pizza_name" value="Pepperoni">
-            <button type="submit">Order Now</button>
-        </form>
+        <img class="image" src="Pepperoni.webp">
+        <button onclick="orderPizza('Pepperoni')" class="buttonOrderNow">Order Now</button>
     </div>
+    <!-- Repeat for other pizzas -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+    function orderPizza(pizzaName) {
+        $.ajax({
+            type: "POST",
+            url: "/order",
+            data: {pizza_name: pizzaName},
+            success: function(response) {
+                // Handle the response here, maybe update the UI to show the added pizza
+                console.log(response);
+            }
+        });
+    }
+    </script>
 
-    <div class="menu-item">
-        <h2>Quattro Formaggi</h2>
-        <img class="image" src = "Quattro-formaggi-pizza-square.jpg">
-        <button class="buttonOrderNow">Add To Cart</button>
-    </div>
+<div class="menu-item">
+    <h2>Formaggi</h2>
+    <img class="image" src="PizzaMargherita.webp">
+    <button onclick="orderPizza('Formaggi')" class="buttonOrderNow">Order Now</button>
+</div>
+<!-- Repeat for other pizzas -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+function orderPizza(pizzaName) {
+    $.ajax({
+        type: "POST",
+        url: "/order",
+        data: {pizza_name: pizzaName},
+        success: function(response) {
+            // Handle the response here, maybe update the UI to show the added pizza
+            console.log(response);
+        }
+    });
+}
+</script>
 
-    <div class="menu-item">
-        <h2>Mario's Madness</h2>
-        <img class="image" src = "pizza-mushrooms-salami-pepperoni-ham.jpg">
-        <button class="buttonOrderNow">Add To Cart</button>
-    </div>
+<div class="menu-item">
+    <h2>Mario's Madness</h2>
+    <img class="image" src="PizzaMargherita.webp">
+    <button onclick="orderPizza('Madness')" class="buttonOrderNow">Order Now</button>
+</div>
 
-    <div class="menu-item">
-        <h2>Luigi's Baloney</h2>
-        <img class="image" src = "Luigi's pizza.jpg">
-        <button class="buttonOrderNow">Add To Cart</button>
-    </div>
+<!-- Repeat for other pizzas -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+function orderPizza(pizzaName) {
+    $.ajax({
+        type: "POST",
+        url: "/order",
+        data: {pizza_name: pizzaName},
+        success: function(response) {
+            // Handle the response here, maybe update the UI to show the added pizza
+            console.log(response);
+        }
+    });
+}
+</script>
 
-    <div class="menu-item">
-        <h2>Bowser Buns</h2>
-        <img class="image" src = "garlic-bread-recipe-snippet.jpg">
-        <button class="buttonOrderNow">Add To Cart</button>
-    </div>
+<div class="menu-item">
+    <h2>Luigi's Baloney</h2>
+    <img class="image" src="PizzaMargherita.webp">
+    <button onclick="orderPizza('Baloney')" class="buttonOrderNow">Order Now</button>
+</div>
+<!-- Repeat for other pizzas -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+function orderPizza(pizzaName) {
+    $.ajax({
+        type: "POST",
+        url: "/order",
+        data: {pizza_name: pizzaName},
+        success: function(response) {
+            // Handle the response here, maybe update the UI to show the added pizza
+            console.log(response);
+        }
+    });
+}
+</script>
+
+<div class="menu-item">
+    <h2>Bowser Buns</h2>
+    <img class="image" src="PizzaMargherita.webp">
+    <button onclick="orderPizza('Buns')" class="buttonOrderNow">Order Now</button>
+</div>
+<!-- Repeat for other pizzas -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+function orderPizza(pizzaName) {
+    $.ajax({
+        type: "POST",
+        url: "/order",
+        data: {pizza_name: pizzaName},
+        success: function(response) {
+            // Handle the response here, maybe update the UI to show the added pizza
+            console.log(response);
+        }
+    });
+}
+</script>
     <a href="/orders">
         <button class="buttonViewCart">View Cart</button>
     </a>
