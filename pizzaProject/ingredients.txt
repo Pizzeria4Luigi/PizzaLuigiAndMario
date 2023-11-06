@@ -1,5 +1,5 @@
 dough:50
-tomato sauce:20
+tomato sauce:35
 cheese:100
 pepperoni:40
 mushrooms:20

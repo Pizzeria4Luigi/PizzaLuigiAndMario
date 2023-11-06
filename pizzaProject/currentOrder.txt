@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 {"Margherita": 21, "Pepperoni": 1, "Formaggi": 1, "Madness": 1, "Baloney": 1, "Buns": 3}
+=======
+{"Margherita": 0, "Pepperoni": 0, "Formaggi": 0, "Madness": 0, "Baloney": 0, "Buns": 0}
+>>>>>>> c6fb325bc749367ecf043dda09f7704571f5b865

@@ -45,10 +45,19 @@
             background-color: #007BFF;
             color: #fff;
             border: none;
+            margin: 15px 0;
         }
         .link {
-            margin: 10px;
+            margin: 20px;
         }
+        .register-button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            margin: 15px 0;
+        }       
     </style>
 </head>
 <body>
@@ -62,7 +71,13 @@
                 <input type = "submit" value = "Login">
             </form>
             <a href="/forgotten_password" class="link">Forgot Password?</a>
+            <button class="register-button" onclick="redirectToRegistration()">Don't have an account? Register now.</button>
         </div>
     </div>
+    <script>
+        function redirectToRegistration() {
+            window.location.href = "RegisterPage.html";
+        }
+    </script>
 </body>
 </html>

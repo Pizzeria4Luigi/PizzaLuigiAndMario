@@ -13,12 +13,27 @@
             color: #fff;
             padding: 12px 0;
             position: fixed;
+            left: 0px;
+            top: 0px;
             width: 100%;
             text-align: center;
-            
+            align-items: center;
         }
         h1 {
             margin: 0;
+        }
+        .cart-icon {
+            position: fixed;
+            top: 70px; /* Adjust the vertical position as needed */
+            right: 20px; /* Adjust the horizontal position as needed */
+            z-index: 1; /* Ensure it's above other content */
+        }
+        .login-button {
+            border: 1px solid #ccc;
+            background-color: #ccc;
+            position: absolute;
+            top: 12px;
+            right: 12px;
         }
         .menu-item {
             border: 1px solid #ccc;
@@ -51,13 +66,6 @@
             border-radius: 0%;
             color: #fff;
         }
-        .buttonViewCart {
-            height: 50px;
-            background-color: #e0f748;
-            border-radius: 0%;
-            color: #fff;
-            width: 85%;
-        }
 
     </style>
 </head>
@@ -69,33 +77,23 @@
             <h1> Welcome! This is our Menu </h1>
         {% endif %}
     </header>
+    <div class="cart-icon">
+        <a href="Orders.html"><img class="imageViewCart" src="shopping-cart-icon-removebg-preview.png"></a>
+    </div>
 
     <div class="menu-item">
         <h2>Margherita</h2>
-        <img class="image" src="PizzaMargherita.webp">
-        <button onclick="orderPizza('Margherita')" class="buttonOrderNow">Order Now</button>
+        <img class="image" src = "PizzaMargherita.webp">
+        <form action="/order" method="post">
+            <input type="hidden" name="pizza_name" value="1">
+            <button class="buttonOrderNow" onclick="Text">Add To Cart</button>
+        </form>
     </div>
-    <!-- Repeat for other pizzas -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-    function orderPizza(pizzaName) {
-        $.ajax({
-            type: "POST",
-            url: "/order",
-            data: {pizza_name: pizzaName},
-            success: function(response) {
-                // Handle the response here, maybe update the UI to show the added pizza
-                console.log(response);
-            }
-        });
-    }
-    </script>    
-    
 
     <div class="menu-item">
         <h2>Pepperoni</h2>
-        <img class="image" src="Pepperoni.webp">
-        <button onclick="orderPizza('Pepperoni')" class="buttonOrderNow">Order Now</button>
+        <img class="image" src = "pepperoni-pizza.png">
+        <button class="buttonOrderNow">Add To Cart</button>
     </div>
     <!-- Repeat for other pizzas -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -156,49 +154,10 @@ function orderPizza(pizzaName) {
 }
 </script>
 
-<div class="menu-item">
-    <h2>Luigi's Baloney</h2>
-    <img class="image" src="PizzaMargherita.webp">
-    <button onclick="orderPizza('Baloney')" class="buttonOrderNow">Order Now</button>
-</div>
-<!-- Repeat for other pizzas -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script>
-function orderPizza(pizzaName) {
-    $.ajax({
-        type: "POST",
-        url: "/order",
-        data: {pizza_name: pizzaName},
-        success: function(response) {
-            // Handle the response here, maybe update the UI to show the added pizza
-            console.log(response);
-        }
-    });
-}
-</script>
-
-<div class="menu-item">
-    <h2>Bowser Buns</h2>
-    <img class="image" src="PizzaMargherita.webp">
-    <button onclick="orderPizza('Buns')" class="buttonOrderNow">Order Now</button>
-</div>
-<!-- Repeat for other pizzas -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script>
-function orderPizza(pizzaName) {
-    $.ajax({
-        type: "POST",
-        url: "/order",
-        data: {pizza_name: pizzaName},
-        success: function(response) {
-            // Handle the response here, maybe update the UI to show the added pizza
-            console.log(response);
-        }
-    });
-}
-</script>
-    <a href="/orders">
-        <button class="buttonViewCart">View Cart</button>
-    </a>
+    <div class="menu-item">
+        <h2>Bowser Buns</h2>
+        <img class="image" src = "garlic-bread-recipe-snippet.jpg">
+        <button class="buttonOrderNow">Add To Cart</button>
+    </div>
 </body>
 </html>

@@ -1,4 +1,5 @@
 import os
+import json
 
 menu = {
     1: {"name": "Margherita", "price": 10, "ingredients": {"dough": 1, "tomato sauce": 1, "cheese": 1}},
@@ -28,8 +29,6 @@ def save_ingredient_stock():
         for ingredient, quantity in ingredient_stock.items():
             file.write(f"{ingredient}:{quantity}\n")
 
-load_ingredient_stock()
-
 def display_menu():
     print("\nPizza Menu:\n")
     for item, pizza in menu.items():
@@ -38,7 +37,7 @@ def display_menu():
 def update_stock(ingredient, quantity):
     if ingredient in ingredient_stock and ingredient_stock[ingredient] >= quantity:
         ingredient_stock[ingredient] -= quantity
-        save_ingredient_stock() 
+        save_ingredient_stock()
     else:
         print(f"Sorry, we are out of {ingredient} or the requested quantity is not available.")
         return False
@@ -53,15 +52,15 @@ def check_pizza_ingredients(pizza):
 
 def take_order():
     order = []
-    
+
     try:
         with open(current_order_path, "r") as order_file:
-            for line in order_file:
-                item_info = line.strip().split(":")
-                choice = int(item_info[0])
-                quantity = int(item_info[1])
-                if choice in menu:
-                    selected_pizza = menu[choice]
+            order_data = json.load(order_file)
+
+        for pizza_name, quantity in order_data.items():
+            for item, pizza in menu.items():
+                if pizza['name'] == pizza_name:
+                    selected_pizza = pizza
                     if check_pizza_ingredients(selected_pizza):
                         for ingredient, required_quantity in selected_pizza['ingredients'].items():
                             update_stock(ingredient, required_quantity * quantity)
@@ -70,7 +69,7 @@ def take_order():
 
     except FileNotFoundError:
         print("Order file not found. No items added to the order.")
-    
+
     if not order:
         print("\nNo items in your order.")
         return

@@ -235,7 +235,14 @@ def waiters_page():
                 orders.append(order)
             print(orders)
         return render_template('waiters_page.html', orders=orders)
-        
+
+@app.route('/discount', methods=['GET', 'POST'])
+def discount():
+    if 'username' in session:
+        flash("Order completed")
+        return render_template('PizzaMenu.html')
+    else:
+        return render_template('Discount.html')
 
 if __name__ == "__main__":
     app.run(debug=True)
