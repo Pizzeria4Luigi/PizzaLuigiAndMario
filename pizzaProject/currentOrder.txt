@@ -1,1 +1,1 @@
-{"Margherita": 7, "Pepperoni": 1, "Formaggi": 1, "Madness": 1, "Baloney": 1, "Buns": 3}
+{"Margherita": 21, "Pepperoni": 1, "Formaggi": 1, "Madness": 1, "Baloney": 1, "Buns": 3}
