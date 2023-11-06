@@ -11,7 +11,7 @@ app.secret_key = "super secret key"
 app.config['MAIL_SERVER'] = 'smtp.gmail.com'
 app.config['MAIL_PORT'] = 465  # or the appropriate port
 app.config['MAIL_USERNAME'] = 'adriansdaleckis@gmail.com'
-app.config['MAIL_PASSWORD'] = 'dqdz iiml mnvo nrdu'
+app.config['MAIL_PASSWORD'] = ''
 app.config['MAIL_USE_TLS'] = False
 app.config['MAIL_USE_SSL'] = True
 
@@ -59,11 +59,19 @@ def send_conf_mail():
 def order_pizza():
     # Get the pizza name from the POST request
     pizza_name = request.form.get('pizza_name')
+
+    # Load the current orders and increment the count for the ordered pizza
+    with open(file_path, "r+") as file:
+        orders = json.load(file)
+        orders[pizza_name] = orders.get(pizza_name, 0) + 1
+        file.seek(0)  # Move to the start of the file
+        json.dump(orders, file)
+        file.truncate()  # Remove any remaining contents from the old version
     
     # Print the order and save it to the file
     print(f"{pizza_name} ordered!")
     with open(file_path, "w") as file:
-        file.write(pizza_name)
+        file.write(orders)
 
     return redirect(url_for('success'))
 

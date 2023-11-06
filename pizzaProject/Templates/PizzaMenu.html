@@ -64,16 +64,19 @@
 <body>
     <header>
         {% if username %}
-            <h1> Hello, {{ username }}! This is our Menu </h1>
+            <h1> Welcome, {{ username }}! This is our Menu </h1>
         {% else %}
-            <h1> Hello user! This is our Menu </h1>
+            <h1> Welcome! This is our Menu </h1>
         {% endif %}
     </header>
 
     <div class="menu-item">
         <h2>Margherita</h2>
         <img class="image" src = "PizzaMargherita.webp">
-        <button class="buttonOrderNow" onclick="Text">Add To Cart</button>
+        <form action="/order" method="post">
+            <input type="hidden" name="pizza_name" value="1">
+            <button class="buttonOrderNow" onclick="Text">Add To Cart</button>
+        </form>
     </div>
 
     <div class="menu-item">
