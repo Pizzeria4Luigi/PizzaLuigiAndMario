@@ -1,1 +1,6 @@
+<<<<<<< HEAD
+Margherita:1
+Pepperoni:1
+=======
 3
+>>>>>>> d8ecd854f404a57ab3e30cac3505c7ad1f72143a
