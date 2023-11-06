@@ -20,6 +20,13 @@
         h1 {
             margin: 0;
         }
+        .login-button {
+            border: 1px solid #ccc;
+            background-color: #ccc;
+            position: absolute;
+            top: 12px;
+            right: 12px;
+        }
         .menu-item {
             border: 1px solid #ccc;
             margin: 20px;
@@ -63,6 +70,9 @@
 </head>
 <body>
     <header>
+        <div class="login-button">
+            <button onclick="window.location.href='LoginPage.html'">Login</button>
+        </div>
         {% if username %}
             <h1> Welcome, {{ username }}! This is our Menu </h1>
         {% else %}
