@@ -38,7 +38,6 @@ def display_menu():
 def update_stock(ingredient, quantity):
     if ingredient in ingredient_stock and ingredient_stock[ingredient] >= quantity:
         ingredient_stock[ingredient] -= quantity
-        print(f"{quantity} units of {ingredient} used. {ingredient_stock[ingredient]} units remaining.")
         save_ingredient_stock()  # Save updated quantities to the file
     else:
         print(f"Sorry, we are out of {ingredient} or the requested quantity is not available.")
@@ -58,10 +57,15 @@ def take_order():
     try:
         with open(current_order_path, "r") as order_file:
             for line in order_file:
-                choice = int(line)
+                item_info = line.strip().split(":")
+                choice = int(item_info[0])
+                quantity = int(item_info[1])
                 if choice in menu:
                     selected_pizza = menu[choice]
                     if check_pizza_ingredients(selected_pizza):
+                        for ingredient, required_quantity in selected_pizza['ingredients'].items():
+                            update_stock(ingredient, required_quantity * quantity)
+                        selected_pizza['quantity'] = quantity
                         order.append(selected_pizza)
 
     except FileNotFoundError:
@@ -74,11 +78,14 @@ def take_order():
     print("\nYour Order:")
     total_price = 0
     for item in order:
-        print(f"{item['name']} - ${item['price']}")
-        total_price += item['price']
+        if item['quantity'] > 0:  # Only print items with a quantity of 1 or more
+            print(f"{item['name']} - Quantity: {item['quantity']} - ${item['price']} each")
+            total_price += item['price'] * item['quantity']
     print(f"Total Price: ${total_price}")
 
 if __name__ == "__main__":
     print("\nWelcome to Pizzeria di Mario e Luigi!")
-    take_order()
+    load_ingredient_stock()  # Load ingredient stock data
+    display_menu()  # Display the menu
+    take_order()  # Process the order
     print("\nThank you for your order. Enjoy your pizza!")
