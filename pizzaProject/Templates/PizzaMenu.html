@@ -24,9 +24,13 @@
         }
         .cart-icon {
             position: fixed;
-            top: 70px; /* Adjust the vertical position as needed */
-            right: 20px; /* Adjust the horizontal position as needed */
-            z-index: 1; /* Ensure it's above other content */
+            top: 70px;
+            right: 20px;
+            z-index: 1;
+        }
+        .cart-icon-img {
+            height: 40px;
+            width: 40px;
         }
         .login-button {
             border: 1px solid #ccc;
@@ -71,6 +75,9 @@
 </head>
 <body>
     <header>
+        <div class="login-button">
+            <button onclick="window.location.href='LoginPage.html'">Login</button>
+        </div>
         {% if username %}
             <h1> Welcome, {{ username }}! This is our Menu </h1>
         {% else %}
@@ -78,86 +85,70 @@
         {% endif %}
     </header>
     <div class="cart-icon">
-        <a href="Orders.html"><img class="imageViewCart" src="shopping-cart-icon-removebg-preview.png"></a>
+        <a href="Orders.html"><img class="cart-icon-img" src="shopping-cart-icon-removebg-preview.png"></a>
     </div>
 
     <div class="menu-item">
         <h2>Margherita</h2>
         <img class="image" src = "PizzaMargherita.webp">
-        <form action="/order" method="post">
-            <input type="hidden" name="pizza_name" value="1">
-            <button class="buttonOrderNow" onclick="Text">Add To Cart</button>
-        </form>
+        <button id="btn1" class="buttonOrderNow">Add To Cart</button>
     </div>
 
     <div class="menu-item">
         <h2>Pepperoni</h2>
         <img class="image" src = "pepperoni-pizza.png">
-        <button class="buttonOrderNow">Add To Cart</button>
+        <button id="btn2" class="buttonOrderNow">Add To Cart</button>
     </div>
-    <!-- Repeat for other pizzas -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-    function orderPizza(pizzaName) {
-        $.ajax({
-            type: "POST",
-            url: "/order",
-            data: {pizza_name: pizzaName},
-            success: function(response) {
-                // Handle the response here, maybe update the UI to show the added pizza
-                console.log(response);
-            }
-        });
-    }
-    </script>
 
-<div class="menu-item">
-    <h2>Formaggi</h2>
-    <img class="image" src="PizzaMargherita.webp">
-    <button onclick="orderPizza('Formaggi')" class="buttonOrderNow">Order Now</button>
-</div>
-<!-- Repeat for other pizzas -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script>
-function orderPizza(pizzaName) {
-    $.ajax({
-        type: "POST",
-        url: "/order",
-        data: {pizza_name: pizzaName},
-        success: function(response) {
-            // Handle the response here, maybe update the UI to show the added pizza
-            console.log(response);
-        }
-    });
-}
-</script>
+    <div class="menu-item">
+        <h2>Quattro Formaggi</h2>
+        <img class="image" src = "Quattro-formaggi-pizza-square.jpg">
+        <button id="btn3" class="buttonOrderNow">Add To Cart</button>
+    </div>
 
-<div class="menu-item">
-    <h2>Mario's Madness</h2>
-    <img class="image" src="PizzaMargherita.webp">
-    <button onclick="orderPizza('Madness')" class="buttonOrderNow">Order Now</button>
-</div>
+    <div class="menu-item">
+        <h2>Mario's Madness</h2>
+        <img class="image" src = "pizza-mushrooms-salami-pepperoni-ham.jpg">
+        <button id="btn4" class="buttonOrderNow">Add To Cart</button>
+    </div>
 
-<!-- Repeat for other pizzas -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script>
-function orderPizza(pizzaName) {
-    $.ajax({
-        type: "POST",
-        url: "/order",
-        data: {pizza_name: pizzaName},
-        success: function(response) {
-            // Handle the response here, maybe update the UI to show the added pizza
-            console.log(response);
-        }
-    });
-}
-</script>
+    <div class="menu-item">
+        <h2>Luigi's Baloney</h2>
+        <img class="image" src = "Luigi's pizza.jpg">
+        <button id="btn5" class="buttonOrderNow">Add To Cart</button>
+    </div>
 
     <div class="menu-item">
         <h2>Bowser Buns</h2>
         <img class="image" src = "garlic-bread-recipe-snippet.jpg">
-        <button class="buttonOrderNow">Add To Cart</button>
+        <button id="btn6" class="buttonOrderNow">Add To Cart</button>
     </div>
+    <script>
+            function updateButtonAvailability() {
+            fetch('pizzaAvailability.txt')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.text();
+                })
+                .then(data => {
+                    const lines = data.split('\n');
+                    for (let i = 0; i < lines.length; i++) {
+                        const button = document.getElementById(`btn${i + 1}`);
+                        if (lines[i].trim() === 'false') {
+                            button.classList.remove('buttonOrderNow');
+                            button.classList.add('buttonUnavailable');
+                            button.textContent = 'Unavailable';
+                            button.disabled = true;
+                        }
+                    }
+                })
+                .catch(error => console.error('Error:', error));
+        }
+            updateButtonAvailability();
+    </script>
+    
+    
 </body>
 </html>
