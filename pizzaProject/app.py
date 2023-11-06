@@ -2,6 +2,7 @@ from flask import Flask, render_template, request, redirect, url_for, json, sess
 import os
 from flask_mail import Mail, Message
 from itsdangerous import URLSafeTimedSerializer
+import time
 
 app = Flask(__name__)
 file_path = os.path.join(os.path.dirname(__file__), "currentOrder.txt")
@@ -36,6 +37,9 @@ def confirm_token(token, expiration=3600):  # Token expiration time set to 1 hou
 
 @app.route('/',methods=['GET', 'POST'])
 def Main():
+    ref_value = request.args.get('ref')
+    session["Table"] = ref_value
+    print(session["Table"])
     if 'username' in session:
         return render_template('PizzaMenu.html', username=session['username'])
     else:
@@ -228,6 +232,22 @@ def forgotten_password():
 @app.route('/new', methods=['GET', 'POST'])
 def new():
     return render_template('bcd.html')
+
+@app.route('/waiters_page', methods=['GET', 'POST'])
+def waiters_page():
+    orders = []
+    _dict = {1 : "Margherita", 2 : "Pepperoni", 3 : "Quattro Formaggi", 4 : "Mario's Madness", 5 : "Luigi's Baloney", 6 : "Bowser Buns"}
+    while True:
+        time.sleep(10)
+        with open('C:/Users/Dalecky/Desktop/University/Week9/test/currentOrder.txt', 'r') as file:
+            data = file.readlines()
+            for line in data:
+                line = line.split(":")
+                order = str(f"Table {int(line[1])} ordered {_dict[int(line[0])]}")
+                orders.append(order)
+            print(orders)
+        return render_template('waiters_page.html', orders=orders)
+        
 
 if __name__ == "__main__":
     app.run(debug=True)

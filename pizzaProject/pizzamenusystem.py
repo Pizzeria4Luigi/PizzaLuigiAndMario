@@ -38,7 +38,7 @@ def display_menu():
 def update_stock(ingredient, quantity):
     if ingredient in ingredient_stock and ingredient_stock[ingredient] >= quantity:
         ingredient_stock[ingredient] -= quantity
-        save_ingredient_stock()  # Save updated quantities to the file
+        save_ingredient_stock() 
     else:
         print(f"Sorry, we are out of {ingredient} or the requested quantity is not available.")
         return False
@@ -78,14 +78,14 @@ def take_order():
     print("\nYour Order:")
     total_price = 0
     for item in order:
-        if item['quantity'] > 0:  # Only print items with a quantity of 1 or more
+        if item['quantity'] > 0:
             print(f"{item['name']} - Quantity: {item['quantity']} - ${item['price']} each")
             total_price += item['price'] * item['quantity']
     print(f"Total Price: ${total_price}")
 
 if __name__ == "__main__":
     print("\nWelcome to Pizzeria di Mario e Luigi!")
-    load_ingredient_stock()  # Load ingredient stock data
-    display_menu()  # Display the menu
-    take_order()  # Process the order
+    load_ingredient_stock()
+    display_menu()
+    take_order()
     print("\nThank you for your order. Enjoy your pizza!")
