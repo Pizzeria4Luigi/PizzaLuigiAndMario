@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration</title>
+
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+        <ul class=flashes>
+        {% for message in messages %}
+        <li>{{ message }}</li>
+        {% endfor %}
+        </ul>
+    {% endif %}
+    {% endwith %}
+
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #73c5eb;
+        }
+        .square {
+            border: 1px solid #ccc;
+            margin: 20px;
+            padding: 10px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+            width: 400px;
+        }
+        .container {
+            margin: 100px auto;
+            width: 300px;
+        }
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="square">
+        <div class="container">
+            <h2>Register</h2>
+            <form action="/registration" method="POST">
+                <input type="text" name="Username" placeholder="Username" value="{{request.form.Username}}">
+                <input type="password" name="Password" placeholder="Password" value="{{request.form.Password}}">
+                <!-- <input type="password" name="Password1" placeholder="Repeat Password" required> -->
+                <input type="email" placeholder="Email" name="Email" value="{{request.form.Email}}">
+                <input type="submit" value="Register">
+            </form>
+            <a href="/login">Already a member? Login</a>
+        </div>
+    </div>
+</body>
+</html>
