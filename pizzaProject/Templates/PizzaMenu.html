@@ -72,17 +72,22 @@
 
     <div class="menu-item">
         <h2>Margherita</h2>
-        <img class="image" src = "PizzaMargherita.webp">
+        <img class="image" src="PizzaMargherita.webp">
         <form action="/order" method="post">
-            <input type="hidden" name="pizza_name" value="1">
-            <button class="buttonOrderNow" onclick="Text">Add To Cart</button>
+            <input type="hidden" name="pizza_name" value="Margherita">
+            <button type="submit">Order Now</button>
         </form>
+    
     </div>
+    
 
     <div class="menu-item">
         <h2>Pepperoni</h2>
         <img class="image" src = "pepperoni-pizza.png">
-        <button class="buttonOrderNow">Add To Cart</button>
+        <form action="/order" method="post">
+            <input type="hidden" name="pizza_name" value="Pepperoni">
+            <button type="submit">Order Now</button>
+        </form>
     </div>
 
     <div class="menu-item">

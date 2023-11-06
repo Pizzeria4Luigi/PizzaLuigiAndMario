@@ -56,18 +56,29 @@ def order_pizza():
     # Get the pizza name from the POST request
     pizza_name = request.form.get('pizza_name')
 
-    # Load the current orders and increment the count for the ordered pizza
-    with open(file_path, "r+") as file:
-        orders = json.load(file)
-        orders[pizza_name] = orders.get(pizza_name, 0) + 1
-        file.seek(0)  # Move to the start of the file
-        json.dump(orders, file)
-        file.truncate()  # Remove any remaining contents from the old version
+    # Assuming that the pizza_name is an integer id like "1", "2", etc.
+    # If it's a string, you may need to map it to an integer ID
+
+    # Initialize an empty orders dictionary
+    orders = {}
+
+    # Check if currentOrder.txt exists and is not empty
+    if os.path.exists(file_path) and os.path.getsize(file_path) > 0:
+        # Load the current orders from the file
+        with open(file_path, "r") as file:
+            for line in file:
+                # Split each line by colon
+                parts = line.strip().split(":")
+                if len(parts) == 2:
+                    orders[parts[0]] = int(parts[1])
+
+    # Increment the count for the ordered pizza
+    orders[pizza_name] = orders.get(pizza_name, 0) + 1
     
-    # Print the order and save it to the file
-    print(f"{pizza_name} ordered!")
+    # Write the updated orders back to the file
     with open(file_path, "w") as file:
-        file.write(orders)
+        for pizza_id, count in orders.items():
+            file.write(f"{pizza_id}:{count}\n")
 
     return redirect(url_for('success'))
 
