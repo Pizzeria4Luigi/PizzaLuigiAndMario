@@ -12,15 +12,21 @@
             background-color: #333;
             color: #fff;
             padding: 12px 0;
-            top: 0px;
+            position: fixed;
             left: 0px;
-            position: absolute;
+            top: 0px;
             width: 100%;
             text-align: center;
             align-items: center;
         }
         h1 {
             margin: 0;
+        }
+        .cart-icon {
+            position: fixed;
+            top: 70px; /* Adjust the vertical position as needed */
+            right: 20px; /* Adjust the horizontal position as needed */
+            z-index: 1; /* Ensure it's above other content */
         }
         .login-button {
             border: 1px solid #ccc;
@@ -60,13 +66,6 @@
             border-radius: 0%;
             color: #fff;
         }
-        .buttonViewCart {
-            height: 50px;
-            background-color: #e0f748;
-            border-radius: 0%;
-            color: #fff;
-            width: 85%;
-        }
 
     </style>
 </head>
@@ -81,6 +80,9 @@
             <h1> Welcome! This is our Menu </h1>
         {% endif %}
     </header>
+    <div class="cart-icon">
+        <a href="Orders.html"><img class="imageViewCart" src="shopping-cart-icon-removebg-preview.png"></a>
+    </div>
 
     <div class="menu-item">
         <h2>Margherita</h2>
@@ -120,8 +122,5 @@
         <img class="image" src = "garlic-bread-recipe-snippet.jpg">
         <button class="buttonOrderNow">Add To Cart</button>
     </div>
-    <a href="/orders">
-        <button class="buttonViewCart">View Cart</button>
-    </a>
 </body>
 </html>
