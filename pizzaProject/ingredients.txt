@@ -1,6 +1,6 @@
 dough:50
 tomato sauce:60
-cheese:100
+cheese:0
 pepperoni:40
 mushrooms:20
 ham:30
