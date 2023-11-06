@@ -80,14 +80,14 @@
         "user": "Adrian_4"
     },
     {
-        "email": "adriansdaleckis4@gmail.com",
+        "email": "adriansdaleckis@gmail.com",
         "pass": "qwerty",
-        "user": "Adrian_4"
+        "user": "Admin_chef"
     },
     {
         "email": "adriansdaleckis4@gmail.com",
         "pass": "qwerty",
-        "user": "Adrian_4"
+        "user": "Admin_waiter"
     },
     {
         "email": "adriansdaleckis4@gmail.com",
@@ -153,5 +153,10 @@
         "email": "adriansdaleckis15@gmail.com",
         "pass": "qwerty",
         "user": "Adrian_15"
+    },
+    {
+        "email": "adriansdaleckis17@gmail.com",
+        "pass": "qwerty",
+        "user": "Adrian_17"
     }
 ]

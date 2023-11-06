@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cart</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: slategray;
+            margin: 0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 12px 0;
+            text-align: center;
+            position: fixed;
+            width: 97.7%;
+            z-index: 1;
+        }
+        h1 {
+            margin: 0;
+        }
+        .menu-item {
+            border: 1px solid #ccc;
+            margin: 20px;
+            padding: 10px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+            width: 250px;
+        }
+        .image {
+            height: 200px;
+            width: 200px;
+            border-radius: 10%;
+        }
+        @media (max-width: 768px) {
+        }
+        .button-container {
+            position: absolute;
+            bottom: 10px;
+            width: 100%;
+        }
+        .buttonOrderNow {
+            height: 50px;
+            width: 200px;
+            background-color: red;
+            border-radius: 0%;
+            color: #fff;
+            margin: 0 auto;
+        }
+
+    </style>
+</head>
+<body>
+    {% for order in orders %}
+        <h1>{{ order }}</h1>
+    {% endfor %}
+</body>
+</html>
