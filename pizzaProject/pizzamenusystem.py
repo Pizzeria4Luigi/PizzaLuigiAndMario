@@ -1,6 +1,7 @@
 import os
 import json
 
+# Define global variables and data structures
 menu = {
     1: {"name": "Margherita", "price": 10, "ingredients": {"dough": 1, "tomato sauce": 1, "cheese": 1}},
     2: {"name": "Pepperoni", "price": 12, "ingredients": {"dough": 1, "tomato sauce": 1, "cheese": 1, "pepperoni": 1}},
@@ -10,10 +11,10 @@ menu = {
     6: {"name": "Bowser Buns", "price": 7, "ingredients": {"dough": 1}}
 }
 
-file_path = os.path.join(os.path.dirname(__file__), "ingredients.txt")
-current_order_path = os.path.join(os.path.dirname(__file__), "currentOrder.txt")
-
 ingredient_stock = {}
+
+file_path = os.path.join(os.path.dirname(__file__), "ingredients.txt")
+current_order_path = os.path.join(os.path.dirname(__file__), "currentOrder.json")
 
 def load_ingredient_stock():
     try:
@@ -50,31 +51,35 @@ def check_pizza_ingredients(pizza):
             return False
     return True
 
-def take_order():
+def take_order(table_id):
     order = []
 
     try:
         with open(current_order_path, "r") as order_file:
             order_data = json.load(order_file)
-
-        for pizza_name, quantity in order_data.items():
-            for item, pizza in menu.items():
-                if pizza['name'] == pizza_name:
-                    selected_pizza = pizza
-                    if check_pizza_ingredients(selected_pizza):
-                        for ingredient, required_quantity in selected_pizza['ingredients'].items():
-                            update_stock(ingredient, required_quantity * quantity)
-                        selected_pizza['quantity'] = quantity
-                        order.append(selected_pizza)
+            if table_id <= len(order_data):
+                table_order = order_data[table_id]
+                for pizza_name, quantity in table_order.items():
+                    for index, pizza in menu.items():
+                        if pizza['name'] == pizza_name:
+                            selected_pizza = pizza
+                            choice = index
+                            if choice in menu:
+                                if check_pizza_ingredients(selected_pizza):
+                                    for ingredient, required_quantity in selected_pizza['ingredients'].items():
+                                        update_stock(ingredient, required_quantity * quantity)
+                                    selected_pizza['quantity'] = quantity
+                                    order.append(selected_pizza)
+                                    break
 
     except FileNotFoundError:
-        print("Order file not found. No items added to the order.")
+        print(f"Order file not found for Table {table_id + 1}. No items added to the order.")
 
     if not order:
-        print("\nNo items in your order.")
+        print(f"\nNo items in the order for Table {table_id + 1}.")
         return
 
-    print("\nYour Order:")
+    print(f"\nOrder for Table {table_id + 1}:")
     total_price = 0
     for item in order:
         if item['quantity'] > 0:
@@ -82,9 +87,20 @@ def take_order():
             total_price += item['price'] * item['quantity']
     print(f"Total Price: ${total_price}")
 
+
 if __name__ == "__main__":
     print("\nWelcome to Pizzeria di Mario e Luigi!")
     load_ingredient_stock()
     display_menu()
-    take_order()
+
+    # Process the order for Table 1 (you can change the table_id as needed)
+    table_id = 0
+    take_order(table_id)
+    table_id = 1
+    take_order(table_id)
+    table_id = 2
+    take_order(table_id)
+    table_id = 3
+    take_order(table_id)
+
     print("\nThank you for your order. Enjoy your pizza!")
