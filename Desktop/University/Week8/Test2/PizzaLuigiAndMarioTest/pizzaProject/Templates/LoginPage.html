@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+        <ul class=flashes>
+        {% for message in messages %}
+        <li>{{ message }}</li>
+        {% endfor %}
+        </ul>
+    {% endif %}
+    {% endwith %}
+
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f05a1a;
+        }
+        .square {
+            border: 1px solid #ccc;
+            margin: 20px;
+            padding: 10px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+            width: 400px;
+        }
+        .container {
+            margin: 100px auto;
+            width: 300px;
+        }
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            margin: 15px 0;
+        }
+        .link {
+            margin: 20px;
+        }
+        .register-button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            margin: 15px 0;
+        }       
+    </style>
+</head>
+<body>
+    <div class="square">
+        <div class="container">
+            <h2>Login</h2>
+            <form action="/login" method="POST">
+                <!-- <input type = "text" name = "Username" placeholder = "Username" value="{{request.form.username}}"> -->
+                <input type="email" placeholder="Email" name="Email" value="{{request.form.email}}">
+                <input type = "password" name = "Password" placeholder = "Password" value="{{request.form.password}}">
+                <input type = "submit" value = "Login">
+            </form>
+            <a href="/forgotten_password" class="link">Forgot Password?</a>
+            <a href="/registration"><button class="register-button">Don't have an account? Register now.</button></a>
+        </div>
+    </div>
+    <script>
+        function redirectToRegistration() {
+            window.location.href = "RegisterPage.html";
+        }
+    </script>
+</body>
+</html>

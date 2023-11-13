@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Menu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: slategray;
+            padding-top: 50px;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 12px 0;
+            position: fixed;
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            text-align: center;
+            align-items: center;
+        }
+        h1 {
+            margin: 0;
+        }
+        .cart-icon {
+            position: fixed;
+            top: 75px;
+            right: 10px;
+            z-index: 1;
+        }
+        .cart-icon-img {
+            height: 40px;
+            width: 40px;
+        }
+        .login-button {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    background-color: #f05a1a;
+    color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-weight: bold;
+    position: absolute;
+    top: 12px;
+    right: 12px;
+}
+
+.login-button:hover {
+    background-color: #999;
+    border-color: #999;
+}
+
+        .menu-item {
+            border: 1px solid #ccc;
+            margin: 20px;
+            padding: 10px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+            width: 250px;
+        }
+        .image {
+            height: 200px;
+            width: 200px;
+            border-radius: 10%;
+        }
+        @media (max-width: 768px) {
+        }
+        .buttonOrderNow {
+            height: 50px;
+            width: 200px;
+            background-color: red;
+            border-radius: 0%;
+            color: #fff;
+        }
+        .buttonUnavailable {
+            height: 50px;
+            width: 200px;
+            background-color: rgb(68, 68, 68);
+            border-radius: 0%;
+            color: #fff;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        {% if username %}
+            <h1> Welcome, {{ username }}! This is our Menu </h1>
+            <a href="/logout" class="login-button">Logout</a>
+        {% else %}
+            <h1> Welcome! This is our Menu </h1>
+            <a href="/login" class="login-button">Login</a>
+        {% endif %}
+
+        </header>
+    <div class="cart-icon">
+        <a href="/orders"><img class="cart-icon-img" src="static/shopping-cart-icon-removebg-preview.png"></a>
+    </div>
+
+    <div class="menu-item">
+        <h2>Margherita - 10$</h2>
+        <img class="image" src="{{ url_for('static', filename='PizzaMargherita.webp') }}">
+        <button id="orderButton1" data-pizza-name="Margherita" class="{{ 'buttonOrderNow' if Margherita else 'buttonUnavailable' }}">
+            {{ 'Order Now' if Margherita else 'Unavailable' }}
+        </button>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+    function orderPizza(pizzaName) {
+        $.ajax({
+            type: "POST",
+            url: "/order",
+            data: {pizza_name: pizzaName},
+            success: function(response) {
+                console.log(response);
+            }
+        });
+    }
+    </script>
+
+<div class="menu-item">
+    <h2>Pepperoni - 12$</h2>
+    <img class="image" src="{{ url_for('static', filename='pepperoni-pizza.png') }}">
+    <button id="orderButton2" data-pizza-name="Pepperoni" class="{{ 'buttonOrderNow' if Pepperoni else 'buttonUnavailable' }}">
+        {{ 'Order Now' if Pepperoni else 'Unavailable' }}
+    </button>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+function orderPizza(pizzaName) {
+    $.ajax({
+        type: "POST",
+        url: "/order",
+        data: {pizza_name: pizzaName},
+        success: function(response) {
+            console.log(response);
+        }
+    });
+}
+</script>
+
+<div class="menu-item">
+    <h2>Quattro Formaggi - 13$</h2>
+    <img class="image" src="{{ url_for('static', filename='Quattro-formaggi-pizza-square.jpg') }}">
+    <button id="orderButton3" data-pizza-name="Formaggi" class="{{ 'buttonOrderNow' if Formaggi else 'buttonUnavailable' }}">
+        {{ 'Order Now' if Formaggi else 'Unavailable' }}
+    </button>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+function orderPizza(pizzaName) {
+    $.ajax({
+        type: "POST",
+        url: "/order",
+        data: {pizza_name: pizzaName},
+        success: function(response) {
+            console.log(response);
+        }
+    });
+}
+</script>
+
+<div class="menu-item">
+    <h2>Mario's Madness - 15$</h2>
+    <img class="image" src="{{ url_for('static', filename='pizza-mushrooms-salami-pepperoni-ham.jpg') }}">
+    <button id="orderButton4" data-pizza-name="Madness" class="{{ 'buttonOrderNow' if Madness else 'buttonUnavailable' }}">
+        {{ 'Order Now' if Madness else 'Unavailable' }}
+    </button>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+function orderPizza(pizzaName) {
+    $.ajax({
+        type: "POST",
+        url: "/order",
+        data: {pizza_name: pizzaName},
+        success: function(response) {
+            console.log(response);
+        }
+    });
+}
+</script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+function orderPizza(pizzaName) {
+    $.ajax({
+        type: "POST",
+        url: "/order",
+        data: {pizza_name: pizzaName},
+        success: function(response) {
+            console.log(response);
+        }
+    });
+}
+</script>
+
+<div class="menu-item">
+    <h2>Luigi's Baloney - 14$</h2>
+    <img class="image" src="{{ url_for('static', filename='Luigis pizza.jpg') }}">
+    <button id="orderButton5" data-pizza-name="Baloney" class="{{ 'buttonOrderNow' if Baloney else 'buttonUnavailable' }}">
+        {{ 'Order Now' if Baloney else 'Unavailable' }}
+    </button>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+function orderPizza(pizzaName) {
+    $.ajax({
+        type: "POST",
+        url: "/order",
+        data: {pizza_name: pizzaName},
+        success: function(response) {
+            console.log(response);
+        }
+    });
+}
+</script>
+<div class="menu-item">
+    <h2>Bowser Buns - 7$</h2>
+    <img class="image" src="{{ url_for('static', filename='garlic-bread-recipe-snippet.jpg') }}">
+    <button id="orderButton6" data-pizza-name="Buns" class="{{ 'buttonOrderNow' if Buns == True else 'buttonUnavailable' }}">
+        {{ 'Order Now' if Buns == True else 'Unavailable' }}
+    </button>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function () {
+        $('.buttonOrderNow').on('click', function () {
+            var pizzaName = $(this).data('pizza-name');
+    $.ajax({
+        type: "POST",
+        url: "/order",
+        data: {pizza_name: pizzaName},
+        success: function(response) {
+            console.log(response);
+        }
+    });
+    });
+});
+</script>
+</body>
+</html>

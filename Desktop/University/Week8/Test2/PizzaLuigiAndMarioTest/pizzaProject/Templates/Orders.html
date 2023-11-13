@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cart</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: slategray;
+            margin: 0;
+            padding-top: 60px;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 12px 0;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            z-index: 1;
+            top: 0px;
+        }
+        h1 {
+            margin: 0;
+        }
+        .menu-item {
+            border: 1px solid #ccc;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: flex;
+            width: 70%;
+            margin-left: 10px;
+
+        }
+        .image {
+            height: 200px;
+            width: 200px;
+            border-radius: 10%;
+            margin-right: 20px;
+        }
+        .content {
+            flex: 1;
+        }
+        .quantity {
+            flex: 1;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+        .quantity span {
+        margin-right: 15px;
+        font-size: 13px;
+        }
+    .quantity form button {
+        background-color: #f44336; 
+        color: #fff; 
+        border: none;
+        padding: 8px 12px;
+        border-radius: 10px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+        @media (max-width: 768px) {
+        }
+        .button-container {
+            position: fixed;
+            width: 100%;
+            top: 80px;
+            right: 15px;
+        }
+        .buttonOrderNow {
+            height: 50px;
+            width: 150px;
+            background-color: red;
+            border-radius: 10px;
+            color: #fff;
+            float: right;
+            text-align: center;
+        }
+        .total-price {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 70%;
+            margin-left: 10px;
+            bottom: 10;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Orders</h1>
+    </header>
+
+    {% for pizza, quantity in data.items() %}
+        {% if quantity > 0 %}
+            <div class="menu-item">
+            {% if pizza == "Margherita" %}
+                <img class="image" src="static/PizzaMargherita.webp">
+            {% elif pizza == "Pepperoni" %}
+                <img class="image" src="static/pepperoni-pizza.png">
+            {% elif pizza == "Formaggi" %}
+                <img class="image" src="static/Quattro-formaggi-pizza-square.jpg">
+                {% elif pizza == "Madness" %}
+                <img class="image" src="static/pizza-mushrooms-salami-pepperoni-ham.jpg">
+                {% elif pizza == "Baloney" %}
+                <img class="image" src="static/Luigis pizza.jpg">
+                {% elif pizza == "Buns" %}
+                <img class="image" src="static/garlic-bread-recipe-snippet.jpg">
+            {% else %}
+                <img class="image" src="static/default.jpg">
+            {% endif %}
+            <div class="content">
+                <h2>{{ pizza.replace('_', ' ') }}</h2>
+            </div>
+            <div class="quantity">
+                <span> Amount: {{ quantity }} </span>
+                <form method="post" action="{{ url_for('change_quantity') }}" style="display: inline;">
+                    <input type="hidden" name="pizzaType" value="{{ pizza }}">
+                    <input type="hidden" name="action" value="decrement">
+                    <button type="submit">-</button>
+                </form>
+            </div>            
+            </div>
+        {% endif %}
+    {% endfor %}
+    <div class="total-price">
+        <h2>Total Price: €{{ total_price }}</h2>
+    </div>
+
+    <!-- Finalize Order Form -->
+    <div class="button-container">
+        <form method="post" action="{{ url_for('discount') }}">
+            <button id="redirectButton" class="buttonOrderNow"><h3>Order Now</h3></button>
+        </form>
+    </div>
+</body>
+</html>
+
+
+
+

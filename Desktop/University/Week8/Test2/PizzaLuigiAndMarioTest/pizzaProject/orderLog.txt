@@ -1,0 +1,679 @@
+Table 1 Order:
+Margherita - Quantity: 1 - $10 each
+Pepperoni - Quantity: 0 - $12 each
+Quattro Formaggi - Quantity: 0 - $13 each
+Mario's Madness - Quantity: 0 - $15 each
+Luigi's Baloney - Quantity: 0 - $14 each
+Bowser Buns - Quantity: 0 - $7 each
+Total Price: $10
+
+Table 2 Order:
+Margherita - Quantity: 0 - $10 each
+Pepperoni - Quantity: 1 - $12 each
+Quattro Formaggi - Quantity: 0 - $13 each
+Mario's Madness - Quantity: 0 - $15 each
+Luigi's Baloney - Quantity: 1 - $14 each
+Bowser Buns - Quantity: 0 - $7 each
+Total Price: $26
+
+Table 3 Order:
+Margherita - Quantity: 0 - $10 each
+Pepperoni - Quantity: 0 - $12 each
+Quattro Formaggi - Quantity: 0 - $13 each
+Mario's Madness - Quantity: 3 - $15 each
+Luigi's Baloney - Quantity: 0 - $14 each
+Bowser Buns - Quantity: 0 - $7 each
+Total Price: $45
+
+Table 4 Order:
+Margherita - Quantity: 0 - $10 each
+Pepperoni - Quantity: 0 - $12 each
+Quattro Formaggi - Quantity: 0 - $13 each
+Mario's Madness - Quantity: 0 - $15 each
+Luigi's Baloney - Quantity: 0 - $14 each
+Bowser Buns - Quantity: 4 - $7 each
+Total Price: $28
+
+Table 1 Order:
+Margherita - Quantity: 1 - $10 each
+Pepperoni - Quantity: 0 - $12 each
+Quattro Formaggi - Quantity: 0 - $13 each
+Mario's Madness - Quantity: 0 - $15 each
+Luigi's Baloney - Quantity: 0 - $14 each
+Bowser Buns - Quantity: 0 - $7 each
+Total Price: $10
+
+Table 2 Order:
+Margherita - Quantity: 0 - $10 each
+Pepperoni - Quantity: 1 - $12 each
+Quattro Formaggi - Quantity: 0 - $13 each
+Mario's Madness - Quantity: 0 - $15 each
+Luigi's Baloney - Quantity: 1 - $14 each
+Bowser Buns - Quantity: 0 - $7 each
+Total Price: $26
+
+Table 3 Order:
+Margherita - Quantity: 0 - $10 each
+Pepperoni - Quantity: 0 - $12 each
+Quattro Formaggi - Quantity: 0 - $13 each
+Mario's Madness - Quantity: 3 - $15 each
+Luigi's Baloney - Quantity: 0 - $14 each
+Bowser Buns - Quantity: 0 - $7 each
+Total Price: $45
+
+Table 4 Order:
+Margherita - Quantity: 0 - $10 each
+Pepperoni - Quantity: 0 - $12 each
+Quattro Formaggi - Quantity: 0 - $13 each
+Mario's Madness - Quantity: 0 - $15 each
+Luigi's Baloney - Quantity: 0 - $14 each
+Bowser Buns - Quantity: 4 - $7 each
+Total Price: $28
+
+Table 1 Order:
+Margherita - Quantity: 1 - $10 each
+Pepperoni - Quantity: 0 - $12 each
+Quattro Formaggi - Quantity: 0 - $13 each
+Mario's Madness - Quantity: 0 - $15 each
+Luigi's Baloney - Quantity: 0 - $14 each
+Bowser Buns - Quantity: 0 - $7 each
+Total Price: $10
+
+Table 2 Order:
+Margherita - Quantity: 0 - $10 each
+Pepperoni - Quantity: 1 - $12 each
+Quattro Formaggi - Quantity: 0 - $13 each
+Mario's Madness - Quantity: 0 - $15 each
+Luigi's Baloney - Quantity: 1 - $14 each
+Bowser Buns - Quantity: 0 - $7 each
+Total Price: $26
+
+Table 3 Order:
+Margherita - Quantity: 0 - $10 each
+Pepperoni - Quantity: 0 - $12 each
+Quattro Formaggi - Quantity: 0 - $13 each
+Mario's Madness - Quantity: 3 - $15 each
+Luigi's Baloney - Quantity: 0 - $14 each
+Bowser Buns - Quantity: 0 - $7 each
+Total Price: $45
+
+Table 4 Order:
+Margherita - Quantity: 0 - $10 each
+Pepperoni - Quantity: 0 - $12 each
+Quattro Formaggi - Quantity: 0 - $13 each
+Mario's Madness - Quantity: 0 - $15 each
+Luigi's Baloney - Quantity: 0 - $14 each
+Bowser Buns - Quantity: 4 - $7 each
+Total Price: $28
+
+Table 1 Order:
+Margherita - Quantity: 1 - $10 each
+Pepperoni - Quantity: 0 - $12 each
+Quattro Formaggi - Quantity: 0 - $13 each
+Mario's Madness - Quantity: 0 - $15 each
+Luigi's Baloney - Quantity: 0 - $14 each
+Bowser Buns - Quantity: 0 - $7 each
+Total Price: $10
+
+Table 2 Order:
+Margherita - Quantity: 0 - $10 each
+Pepperoni - Quantity: 1 - $12 each
+Quattro Formaggi - Quantity: 0 - $13 each
+Mario's Madness - Quantity: 0 - $15 each
+Luigi's Baloney - Quantity: 1 - $14 each
+Bowser Buns - Quantity: 0 - $7 each
+Total Price: $26
+
+Table 3 Order:
+Margherita - Quantity: 0 - $10 each
+Pepperoni - Quantity: 0 - $12 each
+Quattro Formaggi - Quantity: 0 - $13 each
+Mario's Madness - Quantity: 3 - $15 each
+Luigi's Baloney - Quantity: 0 - $14 each
+Bowser Buns - Quantity: 0 - $7 each
+Total Price: $45
+
+Table 4 Order:
+Margherita - Quantity: 0 - $10 each
+Pepperoni - Quantity: 0 - $12 each
+Quattro Formaggi - Quantity: 0 - $13 each
+Mario's Madness - Quantity: 0 - $15 each
+Luigi's Baloney - Quantity: 0 - $14 each
+Bowser Buns - Quantity: 4 - $7 each
+Total Price: $28
+
+Table 1 Order:
+Margherita - Quantity: 1 - $10 each
+Pepperoni - Quantity: 0 - $12 each
+Quattro Formaggi - Quantity: 0 - $13 each
+Mario's Madness - Quantity: 0 - $15 each
+Luigi's Baloney - Quantity: 0 - $14 each
+Bowser Buns - Quantity: 0 - $7 each
+Total Price: $10
+
+Table 2 Order:
+Margherita - Quantity: 0 - $10 each
+Pepperoni - Quantity: 1 - $12 each
+Quattro Formaggi - Quantity: 0 - $13 each
+Mario's Madness - Quantity: 0 - $15 each
+Luigi's Baloney - Quantity: 1 - $14 each
+Bowser Buns - Quantity: 0 - $7 each
+Total Price: $26
+
+Table 3 Order:
+Margherita - Quantity: 0 - $10 each
+Pepperoni - Quantity: 0 - $12 each
+Quattro Formaggi - Quantity: 0 - $13 each
+Mario's Madness - Quantity: 3 - $15 each
+Luigi's Baloney - Quantity: 0 - $14 each
+Bowser Buns - Quantity: 0 - $7 each
+Total Price: $45
+
+Table 4 Order:
+Margherita - Quantity: 0 - $10 each
+Pepperoni - Quantity: 0 - $12 each
+Quattro Formaggi - Quantity: 0 - $13 each
+Mario's Madness - Quantity: 0 - $15 each
+Luigi's Baloney - Quantity: 0 - $14 each
+Bowser Buns - Quantity: 4 - $7 each
+Total Price: $28
+
+Table 1 Order:
+Margherita - Quantity: 1 - $10 each
+Pepperoni - Quantity: 0 - $12 each
+Quattro Formaggi - Quantity: 0 - $13 each
+Mario's Madness - Quantity: 0 - $15 each
+Luigi's Baloney - Quantity: 0 - $14 each
+Bowser Buns - Quantity: 0 - $7 each
+Total Price: $10
+
+Table 2 Order:
+Margherita - Quantity: 0 - $10 each
+Pepperoni - Quantity: 1 - $12 each
+Quattro Formaggi - Quantity: 0 - $13 each
+Mario's Madness - Quantity: 0 - $15 each
+Luigi's Baloney - Quantity: 1 - $14 each
+Bowser Buns - Quantity: 0 - $7 each
+Total Price: $26
+
+Table 3 Order:
+Margherita - Quantity: 0 - $10 each
+Pepperoni - Quantity: 0 - $12 each
+Quattro Formaggi - Quantity: 0 - $13 each
+Mario's Madness - Quantity: 3 - $15 each
+Luigi's Baloney - Quantity: 0 - $14 each
+Bowser Buns - Quantity: 0 - $7 each
+Total Price: $45
+
+Table 4 Order:
+Margherita - Quantity: 0 - $10 each
+Pepperoni - Quantity: 0 - $12 each
+Quattro Formaggi - Quantity: 0 - $13 each
+Mario's Madness - Quantity: 0 - $15 each
+Luigi's Baloney - Quantity: 0 - $14 each
+Bowser Buns - Quantity: 4 - $7 each
+Total Price: $28
+
+Table 1 Order:
+Margherita - Quantity: 1 - $10 each
+Quattro Formaggi - Quantity: 0 - $13 each
+Luigi's Baloney - Quantity: 0 - $14 each
+Bowser Buns - Quantity: 0 - $7 each
+Total Price: $10
+
+Table 2 Order:
+Margherita - Quantity: 0 - $10 each
+Quattro Formaggi - Quantity: 0 - $13 each
+Luigi's Baloney - Quantity: 1 - $14 each
+Bowser Buns - Quantity: 0 - $7 each
+Total Price: $14
+
+Table 3 Order:
+Margherita - Quantity: 0 - $10 each
+Quattro Formaggi - Quantity: 0 - $13 each
+Luigi's Baloney - Quantity: 0 - $14 each
+Bowser Buns - Quantity: 0 - $7 each
+Total Price: $0
+
+Table 4 Order:
+Margherita - Quantity: 0 - $10 each
+Quattro Formaggi - Quantity: 0 - $13 each
+Luigi's Baloney - Quantity: 0 - $14 each
+Bowser Buns - Quantity: 4 - $7 each
+Total Price: $28
+
+Table 1 Order:
+Margherita - Quantity: 1 - $10 each
+Quattro Formaggi - Quantity: 0 - $13 each
+Luigi's Baloney - Quantity: 0 - $14 each
+Bowser Buns - Quantity: 0 - $7 each
+Total Price: $10
+
+Table 2 Order:
+Margherita - Quantity: 16 - $10 each
+Total Price: $160
+
+Table 3 Order:
+Margherita - Quantity: 0 - $10 each
+Quattro Formaggi - Quantity: 0 - $13 each
+Luigi's Baloney - Quantity: 0 - $14 each
+Bowser Buns - Quantity: 0 - $7 each
+Total Price: $0
+
+Table 4 Order:
+Margherita - Quantity: 0 - $10 each
+Quattro Formaggi - Quantity: 0 - $13 each
+Luigi's Baloney - Quantity: 0 - $14 each
+Bowser Buns - Quantity: 4 - $7 each
+Total Price: $28
+
+Table 1 Order:
+Margherita - Quantity: 1 - $10 each
+Total Price: $10
+
+Table 2 Order:
+Margherita - Quantity: 18 - $10 each
+Total Price: $180
+
+Table 3 Order:
+Margherita - Quantity: 0 - $10 each
+Total Price: $0
+
+Table 4 Order:
+Margherita - Quantity: 0 - $10 each
+Total Price: $0
+
+Table 1 Order:
+Margherita - Quantity: 1 - $10 each
+Total Price: $10
+
+Table 2 Order:
+Margherita - Quantity: 18 - $10 each
+Total Price: $180
+
+Table 3 Order:
+Margherita - Quantity: 0 - $10 each
+Total Price: $0
+
+Table 4 Order:
+Margherita - Quantity: 0 - $10 each
+Total Price: $0
+
+Table 1 Order:
+Margherita - Quantity: 1 - $10 each
+Total Price: $10
+
+Table 2 Order:
+Margherita - Quantity: 23 - $10 each
+Total Price: $230
+
+Table 3 Order:
+Margherita - Quantity: 0 - $10 each
+Total Price: $0
+
+Table 4 Order:
+Margherita - Quantity: 0 - $10 each
+Total Price: $0
+
+Table 1 Order:
+Margherita - Quantity: 1 - $10 each
+Pepperoni - Quantity: 0 - $12 each
+Total Price: $10
+
+Table 2 Order:
+Margherita - Quantity: 23 - $10 each
+Pepperoni - Quantity: 8 - $12 each
+Total Price: $326
+
+Table 3 Order:
+Margherita - Quantity: 0 - $10 each
+Pepperoni - Quantity: 0 - $12 each
+Total Price: $0
+
+Table 4 Order:
+Margherita - Quantity: 0 - $10 each
+Pepperoni - Quantity: 0 - $12 each
+Total Price: $0
+
+Table 1 Order:
+Margherita - Quantity: 1 - $10 each
+Total Price: $10
+
+Table 2 Order:
+Margherita - Quantity: 23 - $10 each
+Total Price: $230
+
+Table 3 Order:
+Margherita - Quantity: 0 - $10 each
+Total Price: $0
+
+Table 4 Order:
+Margherita - Quantity: 0 - $10 each
+Total Price: $0
+
+Table 1 Order:
+Margherita - Quantity: 0 - $10 each
+Pepperoni - Quantity: 0 - $12 each
+Total Price: $0
+
+Table 2 Order:
+Margherita - Quantity: 0 - $10 each
+Pepperoni - Quantity: 0 - $12 each
+Total Price: $0
+
+Table 3 Order:
+Margherita - Quantity: 0 - $10 each
+Pepperoni - Quantity: 0 - $12 each
+Total Price: $0
+
+Table 4 Order:
+Margherita - Quantity: 0 - $10 each
+Pepperoni - Quantity: 0 - $12 each
+Total Price: $0
+
+Table 1 Order:
+Margherita - Quantity: 0 - $10 each
+Pepperoni - Quantity: 0 - $12 each
+Formaggi - Quantity: 0 - $13 each
+Madness - Quantity: 0 - $15 each
+Baloney - Quantity: 0 - $14 each
+Buns - Quantity: 0 - $7 each
+Total Price: $0
+
+Table 2 Order:
+Margherita - Quantity: 1 - $10 each
+Pepperoni - Quantity: 1 - $12 each
+Formaggi - Quantity: 0 - $13 each
+Madness - Quantity: 0 - $15 each
+Baloney - Quantity: 0 - $14 each
+Buns - Quantity: 0 - $7 each
+Total Price: $22
+
+Table 3 Order:
+Margherita - Quantity: 0 - $10 each
+Pepperoni - Quantity: 0 - $12 each
+Formaggi - Quantity: 0 - $13 each
+Madness - Quantity: 0 - $15 each
+Baloney - Quantity: 0 - $14 each
+Buns - Quantity: 0 - $7 each
+Total Price: $0
+
+Table 4 Order:
+Margherita - Quantity: 0 - $10 each
+Pepperoni - Quantity: 0 - $12 each
+Formaggi - Quantity: 0 - $13 each
+Madness - Quantity: 0 - $15 each
+Baloney - Quantity: 0 - $14 each
+Buns - Quantity: 0 - $7 each
+Total Price: $0
+
+Table 1 Order:
+Margherita - Quantity: 0 - $10 each
+Pepperoni - Quantity: 0 - $12 each
+Formaggi - Quantity: 0 - $13 each
+Madness - Quantity: 0 - $15 each
+Baloney - Quantity: 0 - $14 each
+Buns - Quantity: 0 - $7 each
+Total Price: $0
+
+Table 2 Order:
+Margherita - Quantity: 1 - $10 each
+Pepperoni - Quantity: 1 - $12 each
+Madness - Quantity: 0 - $15 each
+Baloney - Quantity: 0 - $14 each
+Buns - Quantity: 0 - $7 each
+Total Price: $22
+
+Table 3 Order:
+Margherita - Quantity: 0 - $10 each
+Pepperoni - Quantity: 0 - $12 each
+Formaggi - Quantity: 0 - $13 each
+Madness - Quantity: 0 - $15 each
+Baloney - Quantity: 0 - $14 each
+Buns - Quantity: 0 - $7 each
+Total Price: $0
+
+Table 4 Order:
+Margherita - Quantity: 0 - $10 each
+Pepperoni - Quantity: 0 - $12 each
+Formaggi - Quantity: 0 - $13 each
+Madness - Quantity: 0 - $15 each
+Baloney - Quantity: 0 - $14 each
+Buns - Quantity: 0 - $7 each
+Total Price: $0
+
+Table 1 Order:
+Margherita - Quantity: 0 - $10 each
+Pepperoni - Quantity: 0 - $12 each
+Formaggi - Quantity: 0 - $13 each
+Madness - Quantity: 0 - $15 each
+Baloney - Quantity: 0 - $14 each
+Buns - Quantity: 0 - $7 each
+Total Price: $0
+
+Table 2 Order:
+Margherita - Quantity: 1 - $10 each
+Pepperoni - Quantity: 1 - $12 each
+Madness - Quantity: 0 - $15 each
+Baloney - Quantity: 0 - $14 each
+Buns - Quantity: 0 - $7 each
+Total Price: $22
+
+Table 3 Order:
+Margherita - Quantity: 0 - $10 each
+Pepperoni - Quantity: 0 - $12 each
+Formaggi - Quantity: 0 - $13 each
+Madness - Quantity: 0 - $15 each
+Baloney - Quantity: 0 - $14 each
+Buns - Quantity: 0 - $7 each
+Total Price: $0
+
+Table 4 Order:
+Margherita - Quantity: 0 - $10 each
+Pepperoni - Quantity: 0 - $12 each
+Formaggi - Quantity: 0 - $13 each
+Madness - Quantity: 0 - $15 each
+Baloney - Quantity: 0 - $14 each
+Buns - Quantity: 0 - $7 each
+Total Price: $0
+
+Table 1 Order:
+Margherita - Quantity: 0 - $10 each
+Pepperoni - Quantity: 0 - $12 each
+Total Price: $0
+
+Table 2 Order:
+Margherita - Quantity: 1 - $10 each
+Pepperoni - Quantity: 1 - $12 each
+Total Price: $22
+
+Table 3 Order:
+Margherita - Quantity: 0 - $10 each
+Pepperoni - Quantity: 0 - $12 each
+Total Price: $0
+
+Table 4 Order:
+Margherita - Quantity: 0 - $10 each
+Pepperoni - Quantity: 0 - $12 each
+Total Price: $0
+
+Table 1 Order:
+Margherita - Quantity: 1 - $10 each
+Pepperoni - Quantity: 0 - $12 each
+Total Price: $10
+
+Table 2 Order:
+Margherita - Quantity: 1 - $10 each
+Pepperoni - Quantity: 2 - $12 each
+Total Price: $34
+
+Table 3 Order:
+Margherita - Quantity: 0 - $10 each
+Pepperoni - Quantity: 0 - $12 each
+Total Price: $0
+
+Table 4 Order:
+Margherita - Quantity: 0 - $10 each
+Pepperoni - Quantity: 0 - $12 each
+Total Price: $0
+
+Table 1 Order:
+Margherita - Quantity: 0 - $10 each
+Pepperoni - Quantity: 0 - $12 each
+Total Price: $0
+
+Table 2 Order:
+Margherita - Quantity: 1 - $10 each
+Pepperoni - Quantity: 1 - $12 each
+Total Price: $22
+
+Table 3 Order:
+Margherita - Quantity: 0 - $10 each
+Pepperoni - Quantity: 0 - $12 each
+Total Price: $0
+
+Table 4 Order:
+Margherita - Quantity: 0 - $10 each
+Pepperoni - Quantity: 0 - $12 each
+Total Price: $0
+
+Table 1 Order:
+Margherita - Quantity: 1 - $10 each
+Pepperoni - Quantity: 0 - $12 each
+Total Price: $10
+
+Table 2 Order:
+Margherita - Quantity: 1 - $10 each
+Pepperoni - Quantity: 2 - $12 each
+Total Price: $34
+
+Table 3 Order:
+Margherita - Quantity: 0 - $10 each
+Pepperoni - Quantity: 0 - $12 each
+Total Price: $0
+
+Table 4 Order:
+Margherita - Quantity: 0 - $10 each
+Pepperoni - Quantity: 0 - $12 each
+Total Price: $0
+
+Table 1 Order:
+Margherita - Quantity: 1 - $10 each
+Pepperoni - Quantity: 0 - $12 each
+Total Price: $10
+
+Table 2 Order:
+Margherita - Quantity: 1 - $10 each
+Pepperoni - Quantity: 2 - $12 each
+Total Price: $34
+
+Table 3 Order:
+Margherita - Quantity: 0 - $10 each
+Pepperoni - Quantity: 0 - $12 each
+Total Price: $0
+
+Table 4 Order:
+Margherita - Quantity: 0 - $10 each
+Pepperoni - Quantity: 0 - $12 each
+Total Price: $0
+
+Table 1 Order:
+Margherita - Quantity: 1 - $10 each
+Pepperoni - Quantity: 0 - $12 each
+Total Price: $10
+
+Table 2 Order:
+Margherita - Quantity: 1 - $10 each
+Pepperoni - Quantity: 2 - $12 each
+Total Price: $34
+
+Table 3 Order:
+Margherita - Quantity: 0 - $10 each
+Pepperoni - Quantity: 0 - $12 each
+Total Price: $0
+
+Table 4 Order:
+Margherita - Quantity: 0 - $10 each
+Pepperoni - Quantity: 0 - $12 each
+Total Price: $0
+
+Table 1 Order:
+Margherita - Quantity: 1 - $10 each
+Total Price: $10
+
+Table 2 Order:
+Margherita - Quantity: 1 - $10 each
+Total Price: $10
+
+Table 3 Order:
+Margherita - Quantity: 0 - $10 each
+Total Price: $0
+
+Table 4 Order:
+Margherita - Quantity: 0 - $10 each
+Total Price: $0
+
+Table 1 Order:
+Margherita - Quantity: 1 - $10 each
+Total Price: $10
+
+Table 2 Order:
+Margherita - Quantity: 1 - $10 each
+Total Price: $10
+
+Table 3 Order:
+Margherita - Quantity: 0 - $10 each
+Total Price: $0
+
+Table 4 Order:
+Margherita - Quantity: 0 - $10 each
+Total Price: $0
+
+Table 1 Order:
+Margherita - Quantity: 1 - $10 each
+Total Price: $10
+
+Table 2 Order:
+Margherita - Quantity: 1 - $10 each
+Total Price: $10
+
+Table 3 Order:
+Margherita - Quantity: 0 - $10 each
+Total Price: $0
+
+Table 4 Order:
+Margherita - Quantity: 0 - $10 each
+Total Price: $0
+
+Table 1 Order:
+Margherita - Quantity: 1 - $10 each
+Total Price: $10
+
+Table 2 Order:
+Margherita - Quantity: 1 - $10 each
+Total Price: $10
+
+Table 3 Order:
+Margherita - Quantity: 0 - $10 each
+Total Price: $0
+
+Table 4 Order:
+Margherita - Quantity: 0 - $10 each
+Total Price: $0
+
+Table 1 Order:
+Margherita - Quantity: 1 - $10 each
+Total Price: $10
+
+Table 2 Order:
+Margherita - Quantity: 1 - $10 each
+Total Price: $10
+
+Table 3 Order:
+Margherita - Quantity: 0 - $10 each
+Total Price: $0
+
+Table 4 Order:
+Margherita - Quantity: 0 - $10 each
+Total Price: $0
+

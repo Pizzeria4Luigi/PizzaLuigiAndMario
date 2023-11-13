@@ -1,0 +1,44 @@
+[
+    {
+        "email": "anuj@gmail.com",
+        "pass": "mansi",
+        "user": "anuj",
+        "conf": "True"
+    },
+    {
+        "email": "chef@gmail.com",
+        "pass": "qwerty",
+        "user": "Chef",
+        "conf": "True"
+    },
+    {
+        "email": "waiter@gmail.com",
+        "pass": "qwerty",
+        "user": "Waiter",
+        "conf": "True"
+    },
+    {
+        "email": "adriansdaleckis@gmail.com",
+        "pass": "qwerty",
+        "user": "Adrian",
+        "conf": "True"
+    },
+    {
+        "email": "test1@gmail.com",
+        "pass": "qwerty",
+        "user": "Test1",
+        "conf": "False"
+    },
+    {
+        "email": "test2@gmail.com",
+        "pass": "qwerty",
+        "user": "Test2",
+        "conf": "False"
+    },
+    {
+        "email": "test3@gmail.com",
+        "pass": "qwerty",
+        "user": "Test3",
+        "conf": "True"
+    }
+]

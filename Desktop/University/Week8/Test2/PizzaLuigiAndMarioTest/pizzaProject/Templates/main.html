@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzeria Menu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        .pizza {
+            border: 1px solid #eee;
+            padding: 20px;
+            margin: 20px;
+            display: inline-block;
+            width: 250px;
+            vertical-align: top;
+        }
+
+        img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        button {
+            background-color: #ff5722;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #e64a19;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Welcome to Our Pizzeria!</h1>
+
+    <div class="pizza">
+        <img src="image_placeholder_1.jpg" alt="Pizza Image 1">
+        <h2>Pizza 1</h2>
+        <form action="/order" method="post">
+            <input type="hidden" name="pizza_name" value="1">
+            <button type="submit">Order Now</button>
+        </form>
+    </div>
+
+    <div class="pizza">
+        <img src="image_placeholder_2.jpg" alt="Pizza Image 2">
+        <h2>Pizza 2</h2>
+        <form action="/order" method="post">
+            <input type="hidden" name="pizza_name" value="2">
+            <button type="submit">Order Now</button>
+        </form>
+    </div>
+
+    <div class="pizza">
+        <img src="image_placeholder_3.jpg" alt="Pizza Image 3">
+        <h2>Pizza 3</h2>
+        <form action="/order" method="post">
+            <input type="hidden" name="pizza_name" value="3">
+            <button type="submit">Order Now</button>
+        </form>
+    </div>
+
+    <div class="pizza">
+        <img src="image_placeholder_4.jpg" alt="4">
+        <h2>Pizza 4</h2>
+        <form action="/order" method="post">
+            <input type="hidden" name="pizza_name" value="4">
+            <button type="submit">Order Now</button>
+        </form>
+    </div>
+
+    <div class="pizza">
+        <img src="image_placeholder_5.jpg" alt="Pizza Image 5">
+        <h2>Pizza 5</h2>
+        <form action="/order" method="post">
+            <input type="hidden" name="pizza_name" value="5">
+            <button type="submit">Order Now</button>
+        </form>
+    </div>
+
+    <div class="pizza">
+        <img src="image_placeholder_6.jpg" alt="Pizza Image 6">
+        <h2>Pizza 6</h2>
+        <form action="/order" method="post">
+            <input type="hidden" name="pizza_name" value="6">
+            <button type="submit">Order Now</button>
+        </form>
+    </div>
+
+</body>
+
+</html>

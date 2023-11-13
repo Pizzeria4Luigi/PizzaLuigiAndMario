@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cart</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: slategray;
+            margin: 0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 12px 0;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            z-index: 1;
+        }
+        h1 {
+            margin: 0;
+        }
+        .menu-item {
+            border: 1px solid #ccc;
+            margin: 20px;
+            padding: 10px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+            width: 80%;
+        }
+        .image {
+            height: 200px;
+            width: 200px;
+            border-radius: 10%;
+        }
+        @media (max-width: 768px) {
+        }
+        .button-container {
+            position: absolute;
+            bottom: 10px;
+            width: 100%;
+        }
+        .buttonOrderNow {
+            height: 50px;
+            width: 200px;
+            background-color: red;
+            border-radius: 0%;
+            color: #fff;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Orders</h1>
+        <meta http-equiv="refresh" content="5">
+    </header>
+    {% for pizza in data %}
+        {% if pizza[0] == "Margherita" %}
+        <div class="menu-item">
+            <h2>Margherita</h2>
+            <img class="image" src="{{ url_for('static', filename='PizzaMargherita.webp') }}">
+        </div>
+        {% endif %}
+        {% if pizza[0] == "Pepperoni" %}
+        <div class="menu-item">
+            <h2>Quattro Formaggi</h2>
+            <img class="image" src="{{ url_for('static', filename='pepperoni-pizza.png') }}">
+        </div>
+        {% endif %}
+        {% if pizza[0] == "Formaggi" %}
+        <div class="menu-item">
+            <h2>Pepperoni</h2>
+            <img class="image" src="{{ url_for('static', filename='Quattro-formaggi-pizza-square.jpg') }}">
+        </div>
+        {% endif %}
+        {% if pizza[0] == "Madness" %}
+        <div class="menu-item">
+            <h2>Mario's Madness</h2>
+            <img class="image" src="{{ url_for('static', filename='pizza-mushrooms-salami-pepperoni-ham.jpg') }}">
+        </div>
+        {% endif %}
+        {% if pizza[0] == "Baloney" %}
+        <div class="menu-item">
+            <h2>Luigi's Baloney</h2>
+            <img class="image" src="{{ url_for('static', filename='Luigis pizza.jpg') }}">
+        </div>
+        {% endif %}
+        {% if pizza[0] == "Buns" %}
+        <div class="menu-item">
+            <h2>Bowser Buns</h2>
+            <img class="image" src="{{ url_for('static', filename='garlic-bread-recipe-snippet.jpg') }}">
+        </div>
+        {% endif %}
+    {% endfor %}
+</body>
+</html>
